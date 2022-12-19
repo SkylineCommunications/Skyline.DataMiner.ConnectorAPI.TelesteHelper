@@ -71,12 +71,17 @@
 			}
 		}
 
-		protected AnalogAlarmLimit(byte[] data, int startIndex) : this(data.Skip(startIndex).Take(23).ToArray())
+		public AnalogAlarmLimit()
         {
 
         }
 
-		protected AnalogAlarmLimit(byte[] data)
+		public AnalogAlarmLimit(byte[] data, int startIndex) : this(data.Skip(startIndex).Take(23).ToArray())
+        {
+
+        }
+
+		public AnalogAlarmLimit(byte[] data)
 		{
 			if (data.Length != 23) throw new ArgumentException($"The data of an Analog Alarm Limit should always be 23 bytes long", nameof(data));
 

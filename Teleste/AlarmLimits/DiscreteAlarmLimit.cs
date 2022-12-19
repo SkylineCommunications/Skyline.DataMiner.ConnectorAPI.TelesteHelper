@@ -49,6 +49,11 @@
 			}
 		}
 
+		public DiscreteAlarmLimit()
+		{
+
+		}
+
 		public static IEnumerable<DiscreteAlarmLimit> FromData(byte[] data)
 		{
 			return FromData(data, 0);

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelesteHelper", "Teleste\TelesteHelper.csproj", "{5F2462DE-842E-4F59-8ACD-A9EC84BF0AA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelesteHelperTests", "TelesteHelperTests\TelesteHelperTests.csproj", "{373072AE-68DB-4500-B4FA-3C55631CAE36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5F2462DE-842E-4F59-8ACD-A9EC84BF0AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F2462DE-842E-4F59-8ACD-A9EC84BF0AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F2462DE-842E-4F59-8ACD-A9EC84BF0AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{373072AE-68DB-4500-B4FA-3C55631CAE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{373072AE-68DB-4500-B4FA-3C55631CAE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{373072AE-68DB-4500-B4FA-3C55631CAE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{373072AE-68DB-4500-B4FA-3C55631CAE36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
