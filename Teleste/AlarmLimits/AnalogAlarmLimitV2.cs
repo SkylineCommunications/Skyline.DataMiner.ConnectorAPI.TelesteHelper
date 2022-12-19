@@ -25,27 +25,27 @@
 
 		public double Value { get; protected set; }
 
-		public double HiHi { get; protected set; }
+		public double HiHi { get; set; }
 
-		public double Hi { get; protected set; }
+		public double Hi { get; set; }
 
-		public double Lo { get; protected set; }
+		public double Lo { get; set; }
 
-		public double LoLo { get; protected set; }
+		public double LoLo { get; set; }
 
-		public double Deadband { get; protected set; }
+		public double Deadband { get; set; }
 
 		public double MinValue { get; protected set; }
 
 		public double MaxValue { get; protected set; }
 
-		public bool HiHiEnabled { get; protected set; }
+		public bool HiHiEnabled { get; set; }
 
-		public bool HiEnabled { get; protected set; }
+		public bool HiEnabled { get; set; }
 
-		public bool LoEnabled { get; protected set; }
+		public bool LoEnabled { get; set; }
 
-		public bool LoLoEnabled { get; protected set; }
+		public bool LoLoEnabled { get; set; }
 
 		public string Name
 		{

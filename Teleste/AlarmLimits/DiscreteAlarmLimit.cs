@@ -24,7 +24,7 @@
 
 		public byte Value { get; protected set; }
 
-		public Severity Severity { get; protected set; }
+		public Severity Severity { get; set; }
 
 		public string Name
 		{
