@@ -1,4 +1,4 @@
-﻿namespace Skyline.DataMiner.TelesteHelper.Extensions.Attributes
+﻿namespace Skyline.DataMiner.TelesteHelper.Extensions
 {
     using System;
 
