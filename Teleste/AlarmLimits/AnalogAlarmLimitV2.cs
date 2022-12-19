@@ -15,37 +15,37 @@
 
 		public static byte Type => 0;
 
-		public byte ParamId { get; private set; }
+		public byte ParamId { get; protected set; }
 
-		public byte ParamIdx { get; private set; }
+		public byte ParamIdx { get; protected set; }
 
-		public AnalogAlarmState State { get; private set; }
+		public AnalogAlarmState State { get; protected set; }
 
-		public double StateValue { get; private set; }
+		public double StateValue { get; protected set; }
 
-		public double Value { get; private set; }
+		public double Value { get; protected set; }
 
-		public double HiHi { get; internal set; }
+		public double HiHi { get; protected set; }
 
-		public double Hi { get; internal set; }
+		public double Hi { get; protected set; }
 
-		public double Lo { get; internal set; }
+		public double Lo { get; protected set; }
 
-		public double LoLo { get; internal set; }
+		public double LoLo { get; protected set; }
 
-		public double Deadband { get; set; }
+		public double Deadband { get; protected set; }
 
-		public double MinValue { get; private set; }
+		public double MinValue { get; protected set; }
 
-		public double MaxValue { get; private set; }
+		public double MaxValue { get; protected set; }
 
-		public bool HiHiEnabled { get; internal set; }
+		public bool HiHiEnabled { get; protected set; }
 
-		public bool HiEnabled { get; internal set; }
+		public bool HiEnabled { get; protected set; }
 
-		public bool LoEnabled { get; internal set; }
+		public bool LoEnabled { get; protected set; }
 
-		public bool LoLoEnabled { get; internal set; }
+		public bool LoLoEnabled { get; protected set; }
 
 		public string Name
 		{

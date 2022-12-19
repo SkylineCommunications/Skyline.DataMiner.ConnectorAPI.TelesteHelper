@@ -10,21 +10,21 @@
 		/// </summary>
 		protected virtual IReadOnlyDictionary<byte, IReadOnlyDictionary<byte, IReadOnlyDictionary<byte, string>>> ParameterNameMapping { get; }
 
-		public byte ParamId { get; private set; }
+		public byte ParamId { get; protected set; }
 
-		public byte ParamIdx { get; private set; }
+		public byte ParamIdx { get; protected set; }
 
-		public byte PairId { get; private set; }
+		public byte PairId { get; protected set; }
 
-		public byte TypeCount { get; private set; }
+		public byte TypeCount { get; protected set; }
 
-		public DiscreteAlarmState State { get; private set; }
+		public DiscreteAlarmState State { get; protected set; }
 
-		public byte StateValue { get; private set; }
+		public byte StateValue { get; protected set; }
 
-		public byte Value { get; private set; }
+		public byte Value { get; protected set; }
 
-		public Severity Severity { get; internal set; }
+		public Severity Severity { get; protected set; }
 
 		public string Name
 		{

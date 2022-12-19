@@ -23,44 +23,24 @@ namespace Skyline.DataMiner.TelesteHelper.AlarmLimits.Tests
                 0x2A, 0xF8, 0x69
             };
 
-            AnalogAlarmLimit expectedOutput = new AnalogAlarmLimit
-            {
-                ParamId = 1,
-                ParamIdx = 0,
-                State = AnalogAlarmState.Nominal,
-                StateValue = 0,
-                Value = 33d,
-                HiHi = 70d,
-                Hi = 60d,
-                Lo = 5d,
-                LoLo = -10d,
-                Deadband = 1d,
-                MinValue = -20d,
-                MaxValue = 110d,
-                HiHiSeverity = Severity.Major,
-                HiSeverity = Severity.Minor,
-                LoSeverity = Severity.Minor,
-                LoLoSeverity = Severity.Major
-            };
-
             AnalogAlarmLimit output = new AnalogAlarmLimit(input);
 
-            Assert.AreEqual(expectedOutput.ParamId, output.ParamId);
-            Assert.AreEqual(expectedOutput.ParamIdx, output.ParamIdx);
-            Assert.AreEqual(expectedOutput.State, output.State);
-            Assert.AreEqual(expectedOutput.StateValue, output.StateValue);
-            Assert.AreEqual(expectedOutput.Value, output.Value);
-            Assert.AreEqual(expectedOutput.HiHi, output.HiHi);
-            Assert.AreEqual(expectedOutput.Hi, output.Hi);
-            Assert.AreEqual(expectedOutput.Lo, output.Lo);
-            Assert.AreEqual(expectedOutput.LoLo, output.LoLo);
-            Assert.AreEqual(expectedOutput.Deadband, output.Deadband);
-            Assert.AreEqual(expectedOutput.MinValue, output.MinValue);
-            Assert.AreEqual(expectedOutput.MaxValue, output.MaxValue);
-            Assert.AreEqual(expectedOutput.HiHiSeverity, output.HiHiSeverity);
-            Assert.AreEqual(expectedOutput.HiSeverity, output.HiSeverity);
-            Assert.AreEqual(expectedOutput.LoSeverity, output.LoSeverity);
-            Assert.AreEqual(expectedOutput.LoLoSeverity, output.LoLoSeverity);
+            Assert.AreEqual(1, output.ParamId);
+            Assert.AreEqual(0, output.ParamIdx);
+            Assert.AreEqual(AnalogAlarmState.Nominal, output.State);
+            Assert.AreEqual(0, output.StateValue);
+            Assert.AreEqual(33d, output.Value);
+            Assert.AreEqual(70d, output.HiHi);
+            Assert.AreEqual(60d, output.Hi);
+            Assert.AreEqual(5d, output.Lo);
+            Assert.AreEqual(-10d, output.LoLo);
+            Assert.AreEqual(1d, output.Deadband);
+            Assert.AreEqual(-20d, output.MinValue);
+            Assert.AreEqual(110d, output.MaxValue);
+            Assert.AreEqual(Severity.Major, output.HiHiSeverity);
+            Assert.AreEqual(Severity.Minor, output.HiSeverity);
+            Assert.AreEqual(Severity.Minor, output.LoSeverity);
+            Assert.AreEqual(Severity.Major, output.LoLoSeverity);
         }
 
         [TestMethod()]
