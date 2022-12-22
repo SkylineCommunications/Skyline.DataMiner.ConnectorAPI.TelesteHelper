@@ -11,13 +11,29 @@ namespace Skyline.DataMiner.TelesteHelper.Parsing.Tests
     [TestClass()]
     public class MaskTests
     {
+        //[TestMethod()]
+        //public void MaskTest1()
+        //{
+        //    byte[] receivedMask = new byte[] { 0x00, 0x00, 0x3F, 0xFF };
+        //    Mask mask = new Mask(receivedMask, 0);
+
+        //    List<int> expectedOutput = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+        //    List<int> output = mask.Parameters;
+
+        //    Assert.AreEqual(expectedOutput.Count, output.Count);
+        //    for (int i = 0; i < expectedOutput.Count; i++)
+        //    {
+        //        Assert.AreEqual(expectedOutput[i], output[i]);
+        //    }
+        //}
+
         [TestMethod()]
         public void MaskTest1()
         {
-            byte[] receivedMask = new byte[] { 0x00, 0x00, 0x3F, 0xFF };
+            byte[] receivedMask = new byte[] { 0x00, 0x10, 0x3F, 0xFF };
             Mask mask = new Mask(receivedMask, 0);
 
-            List<int> expectedOutput = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+            List<int> expectedOutput = new List<int> { 11, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
             List<int> output = mask.Parameters;
 
             Assert.AreEqual(expectedOutput.Count, output.Count);
@@ -26,6 +42,22 @@ namespace Skyline.DataMiner.TelesteHelper.Parsing.Tests
                 Assert.AreEqual(expectedOutput[i], output[i]);
             }
         }
+
+        //[TestMethod()]
+        //public void MaskTest2()
+        //{
+        //    byte[] receivedMask = new byte[] { 0x00, 0x1F, 0x32, 0xFF };
+        //    Mask mask = new Mask(receivedMask, 10);
+
+        //    List<int> expectedOutput = new List<int> { 10, 11, 12, 13, 14, 15, 16, 17, 19, 22, 23, 26, 27, 28, 29, 30 };
+        //    List<int> output = mask.Parameters;
+
+        //    Assert.AreEqual(expectedOutput.Count, output.Count);
+        //    for (int i = 0; i < expectedOutput.Count; i++)
+        //    {
+        //        Assert.AreEqual(expectedOutput[i], output[i]);
+        //    }
+        //}
 
         [TestMethod()]
         public void MaskTest2()
@@ -33,7 +65,7 @@ namespace Skyline.DataMiner.TelesteHelper.Parsing.Tests
             byte[] receivedMask = new byte[] { 0x00, 0x1F, 0x32, 0xFF };
             Mask mask = new Mask(receivedMask, 10);
 
-            List<int> expectedOutput = new List<int> { 10, 11, 12, 13, 14, 15, 16, 17, 19, 22, 23, 26, 27, 28, 29, 30 };
+            List<int> expectedOutput = new List<int> { 21, 22, 23, 24, 25, 28, 29, 32, 34, 35, 36, 37, 38, 39, 40, 41 };
             List<int> output = mask.Parameters;
 
             Assert.AreEqual(expectedOutput.Count, output.Count);
@@ -43,13 +75,29 @@ namespace Skyline.DataMiner.TelesteHelper.Parsing.Tests
             }
         }
 
+        //[TestMethod()]
+        //public void MaskTest3()
+        //{
+        //    byte[] receivedMask = new byte[] { 0x01, 0x00, 0x1F, 0x32, 0x00 };
+        //    Mask mask = new Mask(receivedMask, 10);
+
+        //    List<int> expectedOutput = new List<int> { 19, 22, 23, 26, 27, 28, 29, 30, 42 };
+        //    List<int> output = mask.Parameters;
+
+        //    Assert.AreEqual(expectedOutput.Count, output.Count);
+        //    for (int i = 0; i < expectedOutput.Count; i++)
+        //    {
+        //        Assert.AreEqual(expectedOutput[i], output[i]);
+        //    }
+        //}
+
         [TestMethod()]
         public void MaskTest3()
         {
             byte[] receivedMask = new byte[] { 0x01, 0x00, 0x1F, 0x32, 0x00 };
             Mask mask = new Mask(receivedMask, 10);
 
-            List<int> expectedOutput = new List<int> { 19, 22, 23, 26, 27, 28, 29, 30, 42 };
+            List<int> expectedOutput = new List<int> { 17, 29, 30, 31, 32, 33, 36, 37, 40 };
             List<int> output = mask.Parameters;
 
             Assert.AreEqual(expectedOutput.Count, output.Count);

@@ -31,18 +31,32 @@
 			return new Mask(copiedMask, startParameterIndex);
 		}
 
+		//public List<int> Parameters
+		//{
+		//	get
+		//	{
+		//		List<int> parameterIndices = new List<int>();
+		//		byte[] reversedMask = mask.Reverse().ToArray();
+		//		for (int i = 0; i < Length; i++)
+		//		{
+		//			byte b = reversedMask[i / 8];
+		//			byte parameterSetMask = (byte)(1 << (i % 8));
+
+		//			if ((b & parameterSetMask) != 0) parameterIndices.Add(i + startParameterIndex);
+		//		}
+
+		//		return parameterIndices;
+		//	}
+		//}
+
 		public List<int> Parameters
 		{
 			get
 			{
 				List<int> parameterIndices = new List<int>();
-				byte[] reversedMask = mask.Reverse().ToArray();
 				for (int i = 0; i < Length; i++)
 				{
-					byte b = reversedMask[i / 8];
-					byte parameterSetMask = (byte)(1 << (i % 8));
-
-					if ((b & parameterSetMask) != 0) parameterIndices.Add(i + startParameterIndex);
+					if (ConversionHelper.IsBitSet(mask, i)) parameterIndices.Add(i + startParameterIndex);
 				}
 
 				return parameterIndices;
