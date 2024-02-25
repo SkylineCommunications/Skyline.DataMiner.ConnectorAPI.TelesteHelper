@@ -102,12 +102,22 @@
 			};
 
 			List<int> versionNumbersToInclude = new List<int>();
+			bool shouldBeSkipped = true;
 			foreach (int versionNumber in versionNumbers)
 			{
+				if (versionNumber == 0 && shouldBeSkipped) continue;
+				shouldBeSkipped = false;
 				versionNumbersToInclude.Add(versionNumber);
 			}
 
-			return String.Join(".", versionNumbersToInclude);
+			if (versionNumbersToInclude.Count == 1)
+			{
+				return String.Concat("0.", versionNumbersToInclude[0]);
+			}
+			else
+			{
+				return String.Join(".", versionNumbersToInclude);
+			}
 		}
 
 		public static IPAddress ParseSubnetMask(byte subnetMask)
