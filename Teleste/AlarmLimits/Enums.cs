@@ -11,7 +11,7 @@
 
 	public enum DiscreteAlarmState
 	{
-		Nominal = 0,
+		Nominal = 1,
 		Major = 6,
 		Minor = 7,
 		Notification = 8
