@@ -51,6 +51,16 @@ namespace Skyline.DataMiner.TelesteHelper.Parsing.Tests
 
             Assert.AreEqual(expectedOutput, output);
         }
+        
+        [TestMethod()]
+        public void ParseSoftwareVersionTest4()
+        {
+            byte[] input = new byte[] { 0, 175 };
+            string expectedOutput = "0.175";
+            string output = Parsers.ParseSoftwareVersion(input);
+
+            Assert.AreEqual(expectedOutput, output);
+        }
 
         [TestMethod()]
         public void ParseRepliesTest()
