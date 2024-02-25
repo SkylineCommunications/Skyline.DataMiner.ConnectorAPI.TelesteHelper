@@ -102,11 +102,8 @@
 			};
 
 			List<int> versionNumbersToInclude = new List<int>();
-			bool shouldBeSkipped = true;
 			foreach (int versionNumber in versionNumbers)
 			{
-				if (versionNumber == 0 && shouldBeSkipped) continue;
-				shouldBeSkipped = false;
 				versionNumbersToInclude.Add(versionNumber);
 			}
 
