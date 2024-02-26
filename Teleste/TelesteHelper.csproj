@@ -2,8 +2,8 @@
 	<PropertyGroup>
 		<TargetFramework>net462</TargetFramework>
 		<PlatformTarget>x86</PlatformTarget>
-		<AssemblyName>Skyline.DataMiner.TelesteHelper</AssemblyName>
-		<RootNamespace>Skyline.DataMiner.TelesteHelper</RootNamespace>
+		<AssemblyName>Skyline.DataMiner.ConnectorAPI.TelesteHelper</AssemblyName>
+		<RootNamespace>Skyline.DataMiner.ConnectorAPI.TelesteHelper</RootNamespace>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>SkylineCommunications</Authors>
@@ -17,7 +17,7 @@
 		<Description>This NuGet package contains logic to help communication with Teleste products using serial communication.</Description>
 		<PackageIcon>Icon.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<Version>1.0.0.3</Version>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="..\README.md" Pack="true" PackagePath="" />
