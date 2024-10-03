@@ -131,10 +131,22 @@
 			position += 2;
 
 			byte enabledByte = data[position];
-			LoLoEnabled = ConversionHelper.IsBitSet(enabledByte, 6) ^ ConversionHelper.IsBitSet(enabledByte, 7);
-			LoEnabled = ConversionHelper.IsBitSet(enabledByte, 4) ^ ConversionHelper.IsBitSet(enabledByte, 5);
-			HiEnabled = ConversionHelper.IsBitSet(enabledByte, 2) ^ ConversionHelper.IsBitSet(enabledByte, 3);
-			HiHiEnabled = ConversionHelper.IsBitSet(enabledByte, 0) ^ ConversionHelper.IsBitSet(enabledByte, 1);
+			byte mask = 0b10101010;
+
+			if ((enabledByte & mask) == mask)
+			{
+				LoLoEnabled = ConversionHelper.IsBitSet(enabledByte, 7);
+				LoEnabled = ConversionHelper.IsBitSet(enabledByte, 5);
+				HiEnabled = ConversionHelper.IsBitSet(enabledByte, 3);
+				HiHiEnabled = ConversionHelper.IsBitSet(enabledByte, 1);
+			}
+			else
+			{
+				LoLoEnabled = ConversionHelper.IsBitSet(enabledByte, 6) || ConversionHelper.IsBitSet(enabledByte, 7);
+				LoEnabled = ConversionHelper.IsBitSet(enabledByte, 4) || ConversionHelper.IsBitSet(enabledByte, 5);
+				HiEnabled = ConversionHelper.IsBitSet(enabledByte, 2) || ConversionHelper.IsBitSet(enabledByte, 3);
+				HiHiEnabled = ConversionHelper.IsBitSet(enabledByte, 0) || ConversionHelper.IsBitSet(enabledByte, 1);
+			}
 		}
 
 		public byte[] ToData()
